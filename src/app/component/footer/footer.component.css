@@ -1,0 +1,18 @@
+.footer{
+    background-color: var(--colorOscuro);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 15vh;
+}
+
+.iconos_rrss{
+    height: 50px;
+    width: 50px;
+}
+
+@media screen and (max-width: 595px) {
+    .iconos_rrss{
+        display: none;
+    }
+}
