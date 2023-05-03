@@ -1,0 +1,38 @@
+<div class="profile_page">
+    <div class="datos_perfil">
+        <img src={{perfil.photo}} alt="">
+        <span class="name_profile">{{perfil.name}} {{perfil.last_name}}</span>
+        <div class="campo_datos">
+            <span class="datos">Nombre</span>
+            <span class="caja_dato">{{perfil.name}}</span>
+        </div>
+        <div class="campo_datos">
+            <span class="datos">Apellidos</span>
+            <span class="caja_dato">{{perfil.last_name}}</span>
+        </div>
+        <div class="campo_datos">
+            <span class="datos">Correo</span>
+            <span class="caja_dato">{{perfil.email}}</span>
+        </div>
+    </div>
+    <div class="formulario_perfil">
+        <p class="editar_datos">Edita tus datos</p>
+        <form>
+            <div class="form-group margen">
+            <input type="nombre" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name" #name>
+            </div>
+            <div class="form-group margen">
+            <input type="apellido" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your last name" #last_name>
+            </div>
+            <div class="form-group margen">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" #email>
+            </div>
+            <div class="form-group margen">
+            <input type="photo" class="form-control" id="exampleInputPassword1" placeholder="URL Photo" #url_photo>
+            </div>
+            <button type="reset" class="btn margen color" (click)="modificar_datos(name.value,last_name.value,email.value,url_photo.value)">Modificar datos</button>
+        </form>
+        <!-- <span #modificado></span>
+        <span #no_modificado></span> -->
+    </div>
+</div>

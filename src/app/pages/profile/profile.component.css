@@ -1,0 +1,83 @@
+.profile_page{
+    /* height: 90vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-image: url("/assets/img/fondo_profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 20px;
+}
+
+.datos_perfil{
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px white;
+    background-color: var(--colorClaro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+}
+
+.name_profile{
+    color: var(--colorBlanco);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.campo_datos{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: var(--colorBlanco);
+    margin-bottom: 10px;
+}
+
+.datos{
+    font-size: 18px;
+    width: 80px;
+}
+
+.caja_dato{
+    border-radius: 4px;
+    width: 240px;
+    background-color: var(--colorBlanco);
+    color: var(--colorOscuro);
+    text-align: center;
+    padding-top: 2px;
+}
+
+.formulario_perfil{
+    border-radius: 8px;
+    background-color: var(--colorClaro);
+    box-shadow: 2px 2px 4px white;
+    padding: 12px;
+}
+
+.editar_datos{
+    border-bottom: 4px solid var(--colorOscuro);
+    color: var(--colorOscuro);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.margen{
+    margin-top: 10px;
+    width: 320px;
+}
+
+.color{
+    background-color: var(--colorOscuro);
+    color: var(--colorBlanco);
+    margin-top: 40px;
+}
