@@ -40,12 +40,12 @@ export class ProfileComponent {
       const change = this.cambios.nativeElement;
       const noChange = this.no_cambios.nativeElement;
       if (datos_modificados){
-        this.renderer2.addClass(change, 'modificar_datos');
-        this.renderer2.removeClass(change, 'ocultar'); 
+        this.renderer2.setStyle(change,"display","block");
+        setTimeout(()=>{this.renderer2.setStyle(change,"display","none")},3000); 
       }
       else{
-        this.renderer2.addClass(noChange, 'no_modificar_datos');
-        this.renderer2.removeClass(noChange, 'ocultar'); 
+        this.renderer2.setStyle(noChange,"display","block");
+        setTimeout(()=>{this.renderer2.setStyle(noChange,"display","none")},3000);
       }
   }
 }

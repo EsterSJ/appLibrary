@@ -86,6 +86,7 @@ img{
 }
 
 .modificar_datos{
+    display: none;
     color: green;
     font-weight: bold;
     font-size: 20px;
@@ -94,6 +95,7 @@ img{
 }
 
 .no_modificar_datos{
+    display: none;
     color: red;
     font-weight: bold;
     font-size: 20px;
@@ -101,6 +103,6 @@ img{
     padding-top: 5px;
 }
 
-.ocultar{
+/* .ocultar{
     display: none;
-}
+} */
