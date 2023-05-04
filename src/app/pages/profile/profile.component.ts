@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 import { User } from 'src/app/models/user';
 
 @Component({
@@ -7,12 +7,12 @@ import { User } from 'src/app/models/user';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent {
-  // @ViewChild('modificado') cambios: ElementRef;
-  // @ViewChild('no_mofificado') no_cambios: ElementRef;
+  @ViewChild('modificado') cambios: ElementRef;
+  @ViewChild('no_modificado') no_cambios: ElementRef;
 
   public perfil: User;
 
-  constructor(){
+  constructor(private renderer2: Renderer2){
     this.perfil = new User(1234,"Ester","Sánchez Jiménez","ester_s@hotmail.com","assets/img/avatar.png","1234");
   }
 
@@ -35,6 +35,17 @@ export class ProfileComponent {
       if (photo != ''){
         this.perfil.photo = photo;
         datos_modificados = true;
+      }
+
+      const change = this.cambios.nativeElement;
+      const noChange = this.no_cambios.nativeElement;
+      if (datos_modificados){
+        this.renderer2.addClass(change, 'modificar_datos');
+        this.renderer2.removeClass(change, 'ocultar'); 
+      }
+      else{
+        this.renderer2.addClass(noChange, 'no_modificar_datos');
+        this.renderer2.removeClass(noChange, 'ocultar'); 
       }
   }
 }

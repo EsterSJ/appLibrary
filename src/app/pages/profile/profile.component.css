@@ -58,6 +58,9 @@ img{
 }
 
 .formulario_perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 8px;
     background-color: var(--colorClaro);
     box-shadow: 2px 2px 4px white;
@@ -80,4 +83,24 @@ img{
     background-color: var(--colorOscuro);
     color: var(--colorBlanco);
     margin-top: 40px;
+}
+
+.modificar_datos{
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.no_modificar_datos{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.ocultar{
+    display: none;
 }
