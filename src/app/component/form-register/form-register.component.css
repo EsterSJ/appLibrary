@@ -3,7 +3,7 @@
     width: 50vw;
     padding: 10px;
     background-color: var(--colorClaro);
-    box-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 4px white;
 }
 
 .titulo_formulario{
