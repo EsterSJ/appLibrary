@@ -1,0 +1,92 @@
+.page_books{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/fondo_profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenedor_cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+    gap: 20px;
+}
+
+.style_card {
+    width: 200px;
+}
+
+.cuerpo{
+    height: 120px;
+}
+
+.style_card:hover{
+    border: 6px solid var(--colorOscuro);
+}
+
+.imagen_card{
+    height: 200px;
+}
+
+.titulo_card{
+    color: var(--colorOscuro);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.precio{
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+.boton{
+    color: var(--colorBlanco);
+    width: 100%;
+}
+
+.contenedor_formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--colorClaro);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px var(--colorBlanco);
+}
+
+.titulo_formulario_books{
+    color: var(--colorOscuro);
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    border-bottom: 4px solid var(--colorOscuro);
+}
+
+.margen{
+    margin-top: 10px;
+    width: 30vw;
+}
+
+.color_boton{
+    background-color: var(--colorOscuro);
+    font-style: bold;
+    width: 100%;
+    color: var(--colorBlanco);
+}
+
+@media screen and (max-width: 530px) {
+    .titulo_formulario_books{
+        font-size: 20px;
+    }
+}
