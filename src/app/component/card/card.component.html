@@ -1,0 +1,18 @@
+<div class="card style_card" style="width: 18rem;">
+    <div class="modal-header header">
+        <h5 class="card-title titulo_card">{{libro.title | uppercase}}</h5>
+        <button type="reset" class="close" (click)="enviarLibro()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <img class="card-img-top imagen_card" src={{libro.photo}} alt="Card image cap">
+    <div class="card-body">
+    <div class="cuerpo">
+      <span>- {{libro.type}}</span><br>
+      <span>- {{libro.author}}</span><br>
+    </div>
+    <p>{{libro.id_user | reference}}</p>
+    <p class="precio">{{libro.price}} €</p>
+    <a href="#" class="btn boton" [ngStyle]="{'background-color': par ? '#56070C' : '#8f3d38'}">Comprar</a>
+    </div>
+</div>

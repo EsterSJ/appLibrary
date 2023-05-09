@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-image: url("/assets/img/fondo_profile.jpg");
+    background-image: url("/assets/img/fondo_profile.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -15,12 +15,13 @@
     margin: 20px;
     border-radius: 8px;
     box-shadow: 2px 2px 4px white;
-    background-color: var(--colorClaro);
+    background-color: rgba(176,142,107,0.7);;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 12px;
+    height: 70vh;
 }
 
 img{
@@ -62,9 +63,10 @@ img{
     flex-direction: column;
     align-items: center;
     border-radius: 8px;
-    background-color: var(--colorClaro);
+    background-color: rgba(176,142,107,0.7);
     box-shadow: 2px 2px 4px white;
     padding: 12px;
+    height: 70vh;
 }
 
 .editar_datos{

@@ -4,21 +4,10 @@
             <h1 style="color: white; font-weight: bold;">No hay libros que mostrar</h1> 
         </div>
         <div *ngFor="let book of books; let par = even;">
-            <div class="card style_card" style="width: 18rem;">
-                <img class="card-img-top imagen_card" src={{book.photo}} alt="Card image cap">
-                <div class="card-body">
-                <div class="cuerpo">
-                  <h5 class="card-title titulo_card">{{book.title}}</h5>
-                  <span>- {{book.type}}</span><br>
-                  <span>- {{book.author}}</span><br>
-                </div>
-                <p>{{book.id_user | reference}}</p>
-                <p class="precio">{{book.price}} €</p>
-                <a href="#" class="btn boton" [ngStyle]="{'background-color': par ? '#56070C' : '#b08e6b'}">Comprar</a>
-                </div>
-            </div>
+            <app-card [libro] = "book" [par]="par" (nombreLibro)="removeBook($event)"></app-card>
         </div>
     </div>
+    <div class="line"></div>
     <div class="contenedor_formulario">
         <p class="titulo_formulario_books">Añadir libro</p>
         <form>

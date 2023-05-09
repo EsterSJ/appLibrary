@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px;
+    height: 100px;
+}
+
+.style_card {
+    width: 200px;
+    background-color: var(--colorClaro);
+}
+
+.cuerpo{
+    height: 60px;
+}
+
+.style_card:hover{
+    border: 6px solid var(--colorOscuro);
+}
+
+.imagen_card{
+    height: 200px;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.titulo_card{
+    color: var(--colorOscuro);
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.precio{
+    font-weight: bold;
+    text-align: center;
+    font-size: 24px;
+}
+
+.boton{
+    color: var(--colorBlanco);
+    width: 100%;
+    background-color: var(--colorOscuro);
+}
+
+.margen{
+    margin-top: 10px;
+    width: 30vw;
+}
+
+.color_boton{
+    background-color: var(--colorOscuro);
+    font-style: bold;
+    width: 100%;
+    color: var(--colorBlanco);
+}
