@@ -23,16 +23,16 @@ export class BooksService {
   }
 
   public getOne(id_book: number): Book{
-    let libro: Book;
     let i: number = 0;
-    let encontrado: boolean = false;
-    do{
-      if(id_book == this.books[i].id_book){
-        libro = this.books[i];
-        encontrado = true;
-      }
-    } while (i<this.books.length || !encontrado);
-    return libro;
+  
+    while (i<this.books.length && id_book != this.books[i].id_book){
+      i++;
+    }
+
+    if(id_book == this.books[i].id_book){
+      console.log("Libro encontrado: " + this.books[i].title);
+      return this.books[i];
+    }
   }
 
   public add(book: Book):void{

@@ -20,4 +20,17 @@ export class BooksComponent {
     this.bookService.delete(Number(id_libro));
   }
 
+  public mostrarId(id: string): void{
+    console.log("-----Boton search activado------");
+    console.log("Id a mostrar: " + id);
+    
+    if (id != ''){
+      console.log("Entro en el if de mostrarId");
+      this.books = [this.bookService.getOne(Number(id))]
+    }
+    else{
+        this.books = this.bookService.getAll();
+      }
+  }
+
 }
