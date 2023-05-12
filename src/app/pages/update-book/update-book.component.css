@@ -1,0 +1,58 @@
+.page_addBooks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/assets/img/fondo_profile.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contenedor_formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(86,7,12,0.3);
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px var(--colorBlanco);
+}
+
+.titulo_formulario_books{
+    color: var(--colorOscuro);
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    border-bottom: 4px solid var(--colorOscuro);
+}
+
+.margen{
+    margin-top: 10px;
+    width: 30vw;
+}
+
+.color_boton{
+    background-color: var(--colorOscuro);
+    font-style: bold;
+    width: 100%;
+    color: var(--colorBlanco);
+}
+
+.alert_id{
+    display: none;
+    color: var(--colorOscuro);
+    text-shadow: 2px 2px 4px var(--colorBlanco);
+    font-size: 30px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 530px) {
+    .titulo_formulario_books{
+        font-size: 20px;
+    }
+}

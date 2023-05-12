@@ -1,0 +1,26 @@
+<div class="page_addBooks">
+    <div class="contenedor_formulario">
+        <p class="titulo_formulario_books">Añadir libro</p>
+        <form>
+            <div class="form-group margen">
+            <input type="titulo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Titulo" #titulo>
+            </div>
+            <div class="form-group margen">
+            <input type="tapa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tapa dura/blanda" #tapa>
+            </div>
+            <div class="form-group margen">
+            <input type="autor" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Autor" #autor>
+            </div>
+            <div class="form-group margen">
+            <input type="precio" class="form-control" id="exampleInputPassword1" placeholder="Precio" #precio>
+            </div>
+            <div class="form-group margen">
+            <input type="photo" class="form-control" id="exampleInputPassword1" placeholder="Photo" #photo>
+            </div>
+            <div class="form-group margen">
+            <input type="codigo" class="form-control" id="exampleInputPassword1" placeholder="Código libro" #codigo>
+            </div>
+            <button type="reset" class="btn margen color_boton" (click)="addBook(codigo.value,'',titulo.value,tapa.value,autor.value,precio.value,photo.value);">Registrar libro</button>
+        </form>
+    </div>
+</div>

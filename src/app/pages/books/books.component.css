@@ -12,6 +12,19 @@
     padding-bottom: 20px;
 }
 
+.search{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 30vw;
+    padding: 20px;
+}
+
+.boton_search{
+    color: var(--colorBlanco);
+    background-color: var(--colorOscuro);
+}
+
 .contenedor_cards{
     display: flex;
     flex-direction: row;
@@ -52,48 +65,4 @@
 .boton{
     color: var(--colorBlanco);
     width: 100%;
-}
-
-.line{
-    border: 2px solid var(--colorOscuro);
-    width: 90vw;
-    margin: 20px;
-}
-
-.contenedor_formulario{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background-color: rgba(86,7,12,0.3);
-    border-radius: 8px;
-    box-shadow: 2px 2px 4px var(--colorBlanco);
-    width: 90vw;
-}
-
-.titulo_formulario_books{
-    color: var(--colorOscuro);
-    text-align: center;
-    font-weight: bold;
-    font-size: 40px;
-    border-bottom: 4px solid var(--colorOscuro);
-}
-
-.margen{
-    margin-top: 10px;
-    width: 30vw;
-}
-
-.color_boton{
-    background-color: var(--colorOscuro);
-    font-style: bold;
-    width: 100%;
-    color: var(--colorBlanco);
-}
-
-@media screen and (max-width: 530px) {
-    .titulo_formulario_books{
-        font-size: 20px;
-    }
 }

@@ -9,11 +9,12 @@ import { Book } from 'src/app/models/book';
 export class CardComponent {
 @Input() libro: Book;
 @Input() par: boolean;
-@Output() nombreLibro = new EventEmitter<string>();
+@Output() idLibro = new EventEmitter<string>();
 
 constructor() {}
 
 enviarLibro():void{
-  this.nombreLibro.emit(this.libro.title);
+  this.idLibro.emit(String (this.libro.id_book));
 }
+
 }
