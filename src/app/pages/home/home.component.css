@@ -3,32 +3,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    /* background-color: var(--colorClaro); */
+    height: 75vh;
     background-image: url("/assets/img/ezgif.gif");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
 
-/* .container_video{
-    display: flex;
-    height: 70vh;
-    align-items: center;
-    justify-content: center;
-    padding: 2%;
-}
-
-.container_video img{
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: 2px 2px 4px white;
-  } */
-
   .creditos_video{
-    /* position: absolute; */
     padding: 12px;
     text-align: center;text-shadow: 2px 2px 4px black;
     font-weight: bold;

@@ -6,6 +6,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { BooksComponent } from './pages/books/books.component';
 import { AddBooksComponent } from './pages/add-books/add-books.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'addBooks', component: AddBooksComponent},
   {path: 'updateBook', component: UpdateBookComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'profile', component: ProfileComponent}
+  {path: 'profile', component: ProfileComponent},
+  {path: 'login', component: LoginComponent}
 ];
 
 @NgModule({

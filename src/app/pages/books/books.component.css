@@ -15,9 +15,15 @@
 .search{
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 10px;
     width: 30vw;
     padding: 20px;
+    width: 100%;
+}
+
+.ancho_input{
+    width: 500px;
 }
 
 .boton_search{
@@ -65,4 +71,17 @@
 .boton{
     color: var(--colorBlanco);
     width: 100%;
+}
+
+/* media querys */
+@media screen and (max-width: 790px) {
+    .ancho_input{
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .ancho_input{
+        width: 100px;
+    }
 }

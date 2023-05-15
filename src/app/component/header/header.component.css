@@ -1,12 +1,13 @@
 .nav_libreria{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 40px;
     padding-left: 40px;
     background-color: var(--colorOscuro);
     font-weight: bold;
-    gap: 50px;
     width: 100%;
-    height: 15vh;
 }
 
 .logo_libreria{
@@ -14,11 +15,12 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding: 8px;
 }
 
 .icono_libreria{
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
 }
 
 .name_libreria{
@@ -30,6 +32,8 @@
 
 .nav_libreria--links{
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 20px;
@@ -44,13 +48,17 @@
     text-decoration: none;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 /* media querys */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 790px) {
     .icono_libreria{
         display: none;
     }
     .name_libreria{
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
@@ -63,5 +71,7 @@
         justify-content: flex-start;
         align-items: center;
         padding: 0px;
+        gap: 12px;
+        font-size: 10px;
     }
 }
