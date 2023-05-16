@@ -1,7 +1,6 @@
 .page_register{
     display: flex;
-    height: 70vh;
-    padding: 3%;
+    height: 80vh;
     justify-content: center;
     align-items: center;
     background-image: url("/assets/img/fondo_profile.jpeg");

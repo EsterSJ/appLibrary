@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75vh;
+    height: 80vh;
     background-image: url("/assets/img/ezgif.gif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ img{
     align-self: self-start;
 }
 
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
     .container_home{
         display: flex;
         flex-direction: column;
@@ -47,10 +47,22 @@ img{
     .container_video{
         height: 50vh;
     }
-}
+} */
 
 @media screen and (max-width: 500px) {
-    .container_video{
-        display: none;
+    .creditos_video{
+        font-size: 20px;
     }
+
+    .contacto{
+        font-size: 12px;
+    }
+
+    img{
+        width: 20px;
+        height: 20px;
+    }
+    /* .container_video{
+        display: none;
+    } */
 }
