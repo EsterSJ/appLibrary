@@ -22,4 +22,9 @@ export class FormLoginComponent {
       password: [,[Validators.required, Validators.minLength(minLength)]]
     });
   }
+
+  public login():void{
+    console.log("Usuario logeado correctamente");
+    
+  }
 }
