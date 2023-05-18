@@ -25,6 +25,15 @@
     color: var(--colorBlanco);
 }
 
+.is_invalid{
+    /* display: block; */
+    color: red;
+}
+
+.invalid_data{
+    display: block;
+}
+
 @media screen and (max-width: 530px) {
     .titulo_formulario{
         font-size: 20px;

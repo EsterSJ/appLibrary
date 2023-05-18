@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-form-login',
@@ -23,8 +24,11 @@ export class FormLoginComponent {
     });
   }
 
-  public login():void{
-    console.log("Usuario logeado correctamente");
-    
+  public login(email: string):void{
+    Swal.fire(
+      'Hola ' + email,
+      'Disfruta de nuestros libros',
+      'success'
+    )
   }
 }
