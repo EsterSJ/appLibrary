@@ -3,9 +3,36 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 40px;
     background-image: url("/assets/img/fondo_profile.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    color: var(--colorOscuro);
     height: 80vh;
 }
+
+.title{
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px var(--colorBlanco);
+}
+
+/* media querys */
+@media screen and (max-width: 790px) {
+ .title{
+    font-size: 40px;
+ }
+}
+
+@media screen and (max-width: 450px) {
+    .title{
+       font-size: 30px;
+    }
+   }
+
+@media screen and (max-width: 350px) {
+    .title{
+       font-size: 22px;
+    }
+   }
