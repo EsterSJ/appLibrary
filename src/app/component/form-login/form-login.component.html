@@ -4,6 +4,7 @@
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email*" formControlName="email"
         [ngClass]="{is_invalid: (loginForm.get('email').dirty || loginForm.get('email').touched) && !loginForm.get('email').valid}" #email>
         <div *ngIf="!loginForm.get('email').valid" class="invalid_data">
+            <div *ngIf="loginForm.get('email').errors.required">La dirección de correo es obligatoria</div>
             <div *ngIf="loginForm.get('email').errors.email">La dirección de correo es incorrecta</div>
         </div>
         </div>
@@ -11,6 +12,7 @@
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password*" formControlName="password"
         [ngClass]="{is_invalid: (loginForm.get('password').dirty || loginForm.get('password').touched) && !loginForm.get('password').valid}">
         <div *ngIf="!loginForm.get('password').valid" class="invalid_data">
+            <div *ngIf="loginForm.get('password').errors.required">La contraseña es obligatoria</div>
             <div *ngIf="loginForm.get('password').errors.minlength">La contraseña debe tener al menos 8 caracteres</div> 
         </div>
         </div>
