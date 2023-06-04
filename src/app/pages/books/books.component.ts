@@ -9,27 +9,28 @@ import { BooksService } from 'src/app/shared/books.service';
 })
 export class BooksComponent {
 
-  public books: Book[];
+  public books: Book[] = [];
 
-  constructor(public bookService: BooksService){
-    this.books = this.bookService.getAll();
-
+  constructor(private apibookService: BooksService){
+    this.apibookService.getAll().subscribe((data: Book[]) => { 
+                                              this.books = data; console.log(data);
+                                            }); 
   }
 
-  public removeBook(id_libro: string):void{    
-    this.bookService.delete(Number(id_libro));
+  public removeBook(id_libro: string): void{    
+    this.apibookService.delete(Number(id_libro)).subscribe((data: boolean) => {
+                                                            if (data) {
+                                                              this.apibookService.getAll().subscribe((data: Book[]) => { this.books = data; });
+                                                            }
+                                                          });
   }
 
-  public mostrarId(id: string): void{
-    console.log("-----Boton search activado------");
-    console.log("Id a mostrar: " + id);
-    
-    if (id != ''){
-      console.log("Entro en el if de mostrarId");
-      this.books = [this.bookService.getOne(Number(id))]
+  public mostrarId(id: string): void{    
+    if (id != ''){     
+      this.apibookService.getOne(Number(id)).subscribe((data: Book[])=>{ this.books = data });
     }
-    else{
-        this.books = this.bookService.getAll();
+    else{      
+        this.apibookService.getAll().subscribe((data: Book[]) => { this.books = data; });
       }
   }
 

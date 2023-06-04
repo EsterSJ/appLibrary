@@ -10,6 +10,8 @@
         </div>
         <div *ngFor="let book of books; let par = even;">
             <app-card [libro] = "book" [par]="par" (idLibro)="removeBook($event)"></app-card>
+            <!-- <app-card [libro] = "book" [par]="par"></app-card> -->
+
         </div>
     </div>
 </div>

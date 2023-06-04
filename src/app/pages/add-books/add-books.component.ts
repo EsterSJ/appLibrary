@@ -13,16 +13,18 @@ export class AddBooksComponent {
   
   public books: Book[];
 
-  constructor(public bookService: BooksService, public router: Router){
-    this.books = this.bookService.getAll();
+  constructor(public apibookService: BooksService, public router: Router){
+    this.apibookService.getAll().subscribe((data: Book[]) => { this.books = data; });
   }
 
-  public addBook(id_book: string, id_user: string, title: string, type: string, author: string, price: number, photo: string){
+  public addBook(title: string, type: string, author: string, price: number, photo: string, id_book: string, id_user: string){
     let codigo_libro: number = Number(id_book);
     let codigo_usuario: number = Number(id_user);
-    let libro: Book = new Book(codigo_libro,codigo_usuario,title,type,author,price,photo);
-    this.bookService.add(libro);
-    this.router.navigateByUrl('/books');        
+    let libro: Book = new Book(title,type,author,price,photo, codigo_libro,codigo_usuario);
+    this.apibookService.add(libro).subscribe((data: Book[]) => {
+                                                this.books = data; 
+                                                this.router.navigateByUrl('/books'); 
+                                            });        
   }
 
 }
