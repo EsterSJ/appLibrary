@@ -5,13 +5,19 @@
     </div>
     
     <div class="nav_libreria--links">
-        <a class="link" routerLink=''>Home</a>
-        <a class="link" routerLink='books'>Books</a>
-        <a class="link" routerLink='addBooks'>AddBooks</a>
-        <a class="link" routerLink='updateBook'>UpdateBook</a>
-        <a class="link" routerLink='register'>Register</a>
-        <a class="link" routerLink='profile'>Profile</a>
-        <a class="link" routerLink='login'>Login</a>
+
+        <div class= "nav_libreria--sin_loguear" *ngIf = "!this.userService.logueado; else logueado">
+            <a class="link" routerLink=''>Home</a>
+            <a class="link" routerLink='register'>Register</a>
+            <a class="link" routerLink='login'>Login</a>
+        </div>
+        <ng-template #logueado>
+            <a class="link" routerLink='books'>Books</a>
+            <a class="link" routerLink='addBooks'>AddBooks</a>
+            <a class="link" routerLink='updateBook'>UpdateBook</a>
+            <a class="link" routerLink='profile'>Profile</a>
+            <button type="reset" class="cerrar_sesion" (click)="cerrarSesion()"></button>
+        </ng-template>
         <!-- aqui iran el resto de enlaces de la barra de navegacion -->
     </div>
 </nav>
