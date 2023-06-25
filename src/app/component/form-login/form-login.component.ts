@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { User } from 'src/app/models/user';
+import { UserService } from 'src/app/shared/user.service';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,8 +12,9 @@ import Swal from 'sweetalert2';
 })
 export class FormLoginComponent {
   public loginForm: FormGroup;
+  public user: User;
 
-  constructor (private formBuilder: FormBuilder){
+  constructor (private formBuilder: FormBuilder, public userService: UserService, public router: Router){
     this.buildForm();
   }
 
@@ -25,10 +29,29 @@ export class FormLoginComponent {
   }
 
   public login(email: string):void{
-    Swal.fire(
-      'Hola ' + email,
-      'Disfruta de nuestros libros',
-      'success'
-    )
+    let mail = email; 
+    let password = this.loginForm.get('password').value;
+
+    this.user = new User (null,null,null,mail,null,password);
+
+    this.userService.loginUser(this.user).subscribe((data: User[])=>{
+      if (data.length != 0){
+        this.userService.logueado = true;
+        this.userService.user = data[0];
+        Swal.fire(
+          'Bienvenido de nuevo ' + this.userService.user.name,
+          'Disfruta de nuestros libros',
+          'success'
+        ).then(()=>{this.router.navigateByUrl('/books');})
+      }
+      else{
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Usuario no registrado',
+        })
+      }
+      
+    });
   }
 }
