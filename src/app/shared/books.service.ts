@@ -14,12 +14,12 @@ export class BooksService {
 
   }
 
-  public getAll(){
-    return this.http.get(this.url);
+  public getAll(id_user: number){
+    return this.http.get(this.url + '?id_user=' + id_user);
   }
 
-  public getOne(id_book: number){
-    return this.http.get(this.url + '?id=' + id_book);
+  public getOne(id_user: number, id_book: number){
+    return this.http.get(this.url + '?id_user=' + id_user + '&id_book=' + id_book);
   }
 
   public add(book: Book){
@@ -30,7 +30,7 @@ export class BooksService {
     return this.http.put(this.url,book);
   }
 
-  public delete(id_book: number){
-    return this.http.request('delete',this.url,{body:{id_libro:id_book}})
+  public delete(id_user: number, id_book: number){
+    return this.http.request('delete',this.url,{body:{id_user: id_user, id_book: id_book}})
   }
 }

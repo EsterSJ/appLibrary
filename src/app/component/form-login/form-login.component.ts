@@ -39,7 +39,7 @@ export class FormLoginComponent {
         this.userService.logueado = true;
         this.userService.user = data[0];
         Swal.fire(
-          'Bienvenido de nuevo ' + this.userService.user.name,
+          'Bienvenid@ de nuevo ' + this.userService.user.name,
           'Disfruta de nuestros libros',
           'success'
         ).then(()=>{this.router.navigateByUrl('/books');})
