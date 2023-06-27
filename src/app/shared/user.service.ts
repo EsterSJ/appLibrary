@@ -25,4 +25,8 @@ export class UserService {
    public loginUser (user:User){
     return this.http.post(this.url + "/login",user);
    }
+
+   public edit (user: User){
+    return this.http.put(this.url + "/usuarios",user);
+   }
 }
