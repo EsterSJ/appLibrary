@@ -1,14 +1,15 @@
 .profile_page{
-    height: 80vh;
+    padding: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-image: url("/assets/img/fondo_profile.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
-    gap: 20px;
+    background-position: center top;
+    min-height: 86vh;
+    gap: 10px;
 }
 
 .datos_perfil{
@@ -21,7 +22,7 @@
     align-items: center;
     justify-content: center;
     padding: 12px;
-    height: 70vh;
+    height: 480px;
 }
 
 img{
@@ -66,7 +67,7 @@ img{
     background-color: rgba(176,142,107,0.7);
     box-shadow: 2px 2px 4px white;
     padding: 12px;
-    height: 70vh;
+    height: 480px;
 }
 
 .editar_datos{
@@ -108,3 +109,113 @@ img{
 /* .ocultar{
     display: none;
 } */
+
+/* Estilo base para pantallas más pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+    .profile_page {
+        padding: 2%;
+        min-height: 100vh;
+    }
+
+    .datos_perfil,
+    .formulario_perfil {
+        height: auto;
+        width: 340px;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .name_profile {
+        font-size: 24px;
+    }
+
+    .campo_datos {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .datos {
+        font-size: 14px;
+        width: 60px;
+    }
+
+    .caja_dato {
+        width: 180px;
+        padding-top: 1px;
+    }
+}
+
+/* Estilo para pantallas medianas (entre 768px y 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .profile_page {
+        padding: 2%;
+    }
+
+    .datos_perfil,
+    .formulario_perfil {
+        height: auto;
+    }
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .name_profile {
+        font-size: 26px;
+    }
+
+    .campo_datos {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .datos {
+        font-size: 16px;
+        width: 70px;
+    }
+
+    .caja_dato {
+        width: 200px;
+        padding-top: 2px;
+    }
+}
+
+/* Estilo para pantallas grandes (más de 1024px) */
+@media (min-width: 1025px) {
+    .profile_page {
+        padding: 3%;
+    }
+
+    .datos_perfil,
+    .formulario_perfil {
+        height: 480px;
+    }
+
+    img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .name_profile {
+        font-size: 30px;
+    }
+
+    .campo_datos {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .datos {
+        font-size: 18px;
+        width: 80px;
+    }
+
+    .caja_dato {
+        width: 240px;
+        padding-top: 2px;
+    }
+}
